@@ -6,6 +6,9 @@ import CheckoutForm from './CheckoutForm'
 
 test('form header renders', () => {
   render(<CheckoutForm />)
+
+  const h2 = screen.getAllByText(/checkout form/i)
+  expect(h2).toBeTruthy()
 })
 
 test('form shows success message on submit with form details', () => {
